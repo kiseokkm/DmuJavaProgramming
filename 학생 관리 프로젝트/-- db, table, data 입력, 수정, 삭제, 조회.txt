@@ -1,0 +1,22 @@
+-- db, table, data 입력, 수정, 삭제, 조회 
+-- 1 db 생성
+drop database if exists mydb; 
+create database mydb; 
+use mydb; 
+-- 2 table 생성
+drop table if  exists testttbl; 
+create table    testtbl (
+	id     varchar(20) primary key, 
+    name   varchar(10),
+    dept   varchar(20) 
+);
+-- 데이터 삽입 
+insert into testtbl values('2020001', '김철수', '컴퓨터시스템');
+insert into testtbl values('2020002', '이영희', '컴퓨터시스템');
+insert into testtbl values('2020003', '아이유', '디자인학과');
+insert into testtbl values('2020004', '뉴진스', '체육학과');
+-- 수정
+update testttbl set name = '김종민' where id = '2020001'; 
+-- 삭제
+delete from testttbl where name = '김종민'; 
+select * from testttbl; 
